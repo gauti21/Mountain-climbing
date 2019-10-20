@@ -1,0 +1,32 @@
+<html>
+    <head>
+         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Signup</title>
+        <link rel="stylesheet" href="signup.css">
+    </head>
+    <body>
+        <div class="signup">
+            <form name="form1">
+                <h2 style="color:#fff;">Sign Up</h2>
+                <input type="text" name="username" placeholder="First Name" required><br><br>
+                <input type="text" name="username" placeholder="Last Name" required><br><br>
+                <input type="email" name="email" placeholder="Email" required><br><br>
+                <input type="password" id="q1" name="pass" placeholder="Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{4,}" required><br><br>
+                <input type="password" id="q2" name="pass" placeholder="Confirm Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required><br><br>
+                <input type="submit" onclick="CheckPassword()" value="Sign up"><br><br>
+                Already have an account?<a href="login.html">&nbsp;LogIn</a>
+            </form>
+        </div>
+    </body>
+    <script>
+        function CheckPassword(){
+        var a=document.getElementById("q1").value;
+        var b=document.getElementById("q2").value;
+        if(a!=b){
+            alert("Please match your password");
+        }
+        else if(a!=""&&b!=""){
+            alert("Get ready for mountain adventures");
+        }}
+    </script>
+</html>

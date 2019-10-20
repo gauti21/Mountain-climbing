@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="reset.css">
+        <title>Reset password</title>
+
+    </head>
+    <body>
+            <div class="reset">
+                    <form>
+                        <h2 style="color:white">Reset password</h2>
+                        <input type="password" name="pw" placeholder="old password"><br>
+                        <input type="password" id="q1" name="pw" placeholder="new password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{4,}"><br>
+                        <input type="password" id="q2" name="pw" placeholder="confirm password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{4,}"><br><br>
+                        <input type="submit" onclick="go()"><br><br>
+                        Back to login page -> <a href="login.html">&nbsp;LogIn</a>
+                    </form>
+            </div>
+    </body>
+    <script>
+         function go(){
+        var a=document.getElementById("q1").value;
+        var b=document.getElementById("q2").value;
+        if(a!=b){
+            alert("Please match your password");
+        }
+        else if(a!=""&&b!=""){
+            alert("Your password changed");
+        }}
+    </script>
+</html>

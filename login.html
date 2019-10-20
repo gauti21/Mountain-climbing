@@ -1,0 +1,39 @@
+<html>
+    <head>
+         <link href="https://fonts.googleapis.com/css?family=Long+Cang&display=swap" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Login</title>
+        <link rel="stylesheet" href="login.css">
+        <!--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">-->
+    </head>
+    <body>
+        <div class="signin">
+            <form>
+                <h2 style="color:rgb(255, 255, 255)">Log In</h2>
+                <input type="text" class="input" id="q1" placeholder="Username" name="username" required><br>
+                <input type="password" class="input" id="q2" name="pass" placeholder="password" required><br><br>
+                <a href=""><input type="submit" value="Log In" onclick="go()"></a><br>
+                <br>
+                <div id="container">
+                    <a href="reset.html" class="g" style="margin-right: 0px; font-size:13px; font-family:Tahoma, Geneva, sans-serif;">Reset password</a>
+                    <a href="forget.html" class="" style="margin-right: 0px; font-size:13px; font-family:Tahoma, Geneva, sans-serif;">Forgot password</a>
+                </div><br><br><br><br><br><br>
+                Don't have an account?<a href="signup.html">Sign Up</a>
+            </form>
+        </div>
+    </body>
+    <script>
+        function go()
+        {
+            var decimal=  /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{6,15}$/
+            var a=document.getElementById("q1").value;
+            var b=document.getElementById("q2").value;
+            if(a!=""&&b!=""&&b.match(decimal)){
+                alert("Welcome "+a);
+            }
+            else{
+                alert("Please enter correct password");
+            }
+        }
+    </script>
+</html>
